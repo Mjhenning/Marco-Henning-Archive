@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42facf8eb3d14d48b5f386cde55884c, type: 3}
+  m_Name: RocksRandomGen
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 128935683, guid: 9d9c838102f17e3448f4639f54d904cb, type: 3}
+  - {fileID: 2023517905, guid: 78915d8229738c545a765221ea5a5880, type: 3}
+  - {fileID: 945401805, guid: caafd7c2fc2fc0041b9f4a7bdc5fdc40, type: 3}
+  - {fileID: 2095414199, guid: 21f18d806ec758d429dd72ce0c5715a0, type: 3}
+  - {fileID: 1605025214, guid: 7947d1a03347430438373a9665500b26, type: 3}
+  - {fileID: 1288633026, guid: c27d67fefe206fa42b3e351dae0f79cf, type: 3}
+  - {fileID: 785666640, guid: 03d5a6d1163e97749a1c0b78ab2cde8a, type: 3}
+  - {fileID: 114526028, guid: 0532ef79a5dc84a45b9883651d109f1f, type: 3}
+  - {fileID: 1687137008, guid: bb61f01b4da007e47ada58ad66538e5d, type: 3}
+  - {fileID: 1084553192, guid: 47fdfa46192a33c40ae7c291fc55523d, type: 3}
+  rotateTowards_Normal: 1
+  rotationRange: {x: 0, y: 360}
+  minScale: {x: 2, y: 2, z: 1}
+  maxScale: {x: 2.3, y: 2.3, z: 2.3}
+  minHeight: 3
+  maxHeight: 70
+  MeshMask:
+    serializedVersion: 2
+    m_Bits: 64

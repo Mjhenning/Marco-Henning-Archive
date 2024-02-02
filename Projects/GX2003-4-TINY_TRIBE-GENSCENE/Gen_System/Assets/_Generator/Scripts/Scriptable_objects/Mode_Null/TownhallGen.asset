@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c5ca721929aba4cb48f3a26b8e58ba, type: 3}
+  m_Name: TownhallGen
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 183158, guid: 12e8bcc9b44108941997f030f3bfe6d0, type: 3}
+  rotateTowards_Normal: 1
+  rotationRange: {x: 0, y: 360}
+  PlacementScale: {x: 0.5, y: 0.5, z: 0.5}
+  MeshMask:
+    serializedVersion: 2
+    m_Bits: 64
