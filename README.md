@@ -1,38 +1,49 @@
 # Marco Henning Archive
 
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+An archive setup to showcase various projects developed and completed during Marco Henning's student courses, the goal of this archive is to show my understanding of various elements of game design/ development and to showcase how I adapt and use new things I've learned.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+Here's a list of each and what they were made for:
+- Tiny Tibe Generation Scene (Group Student Project)
+- Desktop Pet Prototype (Student Project)
+- Networked Prorotype (Student Project)
+- Open World Prototype (Student Project)
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## Project Intentions
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+##Tiny Tribe Generation Scene
+Originally developed as part of a larger group project where we had to develop a functioning tiny tribe comprised of independent interacting systems. Each system was developed by individual students. My system was specifically the generation system of the environment and resources; this system was later also expanded to help spawn animals, civilian AI and starting villages.
+##Desktop Pet Prototype
+A personal student project developed over the span of a semester. We were tasked with bringing to life a virtual AI pet that convincingly simulates intelligence and complex behaviour. The essence of this challenge lied in designing an AI that not only reacts in a nuanced manner to user interactions but also incorporates external factors to provide dynamic and engaging feedback. This pet was also at the end of the project tasked to be compatible with Android devices.
+##Networked Prototype
+A personal student project developed over the span of a semester. We were tasked with creating a networked multiplayer arcade game prototype that demonstrates the understanding of peer-to-peer networking in Unity using Mirror during the first 8 weeks. During the final 8 weeks we took this arcade prototype and turned it into a team-based prototype that can be deployed on a dedicated server infrastructure on AWS. This prototype had to have a continuous gameplay loop, allowing players to join, engage in the current round, and continue playing until they're ready to leave.
+##Open World Prototype
+A personal student project developed over the span of a term. We were asked to develop a sandbox game with modular, interacting systems. The main focus of this assignment was to gain experience with data management, inter-system communication, and project architecture. We were also limited to developing the game on a small island in order to limit the scope and to provide restrictions on these systems.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+##Noteworthy integration in Projects
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+##Tiny Tribe Generation Scene
+Fully procedrual generation system consisting of multiple generators working together to generate one full environment at once:
+- Terrain generator, generates full terrain with a mesh and colors to represent each "level" in the Terrain
+- Town Generator, choses random spots on the terrain to generate a bubble where within a town generates itself with a town hall, a specified randomized amount of civilian huts and resource storage.
+- Resource Generator, same approach as the town generator but only has one bubble with a randomized amount of resources within a specified heigh range.
+- Animal Spawner, derived from the resource generator and works in a very similar vein.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Also added some scripts that can be used by other systems to acess data from the generated environment.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+##Desktop Pet Prototype
+Main noteworthy things from this project is a procedurally generated shop, items in said shop and randomized responses and actions from the vendor.
+The shop generator is randomized based off of parameters and a background sanity system that influenced by player actions such as discarding shop items or ignoring the vendor.
+The items inside the shop is randomized based off of various user defined prefixes, suffixes, descriptions and even influenced by the specific set / type combination of each item. Each item sprite is also defined by it's specfic set/type combination.
+The vendor's actions are defined by a state tree with user defined parameters that are slightly influenced by the sanity system. API integrations are used to help make responses more interresting. Either a fact or death counter API is used based on how "corrupt" the vendor has become, generic user defined responses are distorted and changed based on the vendor's sanity.
+Various smaller interactions were coded for the vendor, such as changing his mask, waking him up when he's asleep and even changing the vendor's tie's colour.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+##Networked Prototype
+Main impressive feat is having a functional networked prototype with a continous loop and alot of visual feedback and colors used to identified players. Global scoreboards are also implemented that sync up between all isntances of the game. One small script was added for convenience when it comes to launching, restarting or stopping the server on a linux machine.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+##Open World Prototype
+Impressive feats include functioning inventory and crafting system and item states that are influenced by envrionmental interactions.
+Serailized inventory system that can be clicked and dragged around to change the slots items are in or to swap the slots between items. A functional hotbar is also coded that can easily be customized in the inventory.
+Items are influenced by a fire placed in the envrionment, the stats on these items change based on how cooked they are and their sprites and uses also change.
+A very basic crafting system with a singular recipe was also created.
